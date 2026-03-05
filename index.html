@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, James <3 !</title>
+
+  <!-- This script pulls in Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- These are for the animations and photo gallery -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
+
+  <!-- Google Fonts for the Anime look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link to your new external CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- IMPORTANT: Replace with a real image link after you upload it -->
+  <meta property="og:image" content="https://placehold.co/1200x630/87CEEB/FFFFFF?text=A+Surprise+For+[Name]">
+</head>
+<body>
+<!-- Canvas for the falling cherry blossoms -->
+<canvas id="sakura-canvas"></canvas>
+
+<!-- Section 1: Hero Welcome -->
+<header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="img/sa.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
+    <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday, my husband Mr McFadden <3!</h1>
+    <p class="mt-4 text-xl font-semibold">Celebrating a wonderful journey of James McFadden</p>
+    <div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto p-6 md:p-12">
+
+  <!-- Section 2: A Letter For You -->
+  <section class="my-16 md:my-24 max-w-3xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-anime text-sakura mb-8 drop-shadow-sm">A Special Message For You</h2>
+    <div class="text-left text-lg leading-relaxed space-y-4 bg-white p-8 rounded-lg shadow-lg">
+      <!-- TODO: Write your personal letter here -->
+      <p>My dearest husband,</p>
+      <p>It's wild to think that you are at the age of me when we first met. I'm glad that I'm a part of your journey. Looking back, I never could imagined how much we would grow together. You've become such an incredible man, and I'm grateful everyday that I get to stand beside you through every chapter of life :") </p>
+      <p>Happy 24th birthday to my most favorite person in the world, my best friend, and my forever. May this year bring you closer to your dreams and every you (and I) have beeen working for. I can't wait to keep building our life together and celebrating every moment by your side </p>
+      <p> Thank you for loving me the way you do and for always being by my (and Jackie's) side. I'm so lucky to walk through life with you 💛.</p>
+      <p>P/s: I already got your gifts. Wait till we meet again. I know you are gonna love the gifts ;) </p>
+      <p class="text-right mt-8">
+        Forever Yours<br>
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 3: The Timeline -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Your Birthday Since We've Been Together</h2>
+    <div class="space-y-16">
+      <!-- Timeline Item 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <!-- TODO: Replace with your photo -->
+        <img src="img/2023.jpg" alt="Add photo 1" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-left">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-2xl font-anime text-sakura">Your Birthday in 2023</h3>
+          <p class="mt-2 text-lg">It was your first birthday that we celebrated together. I was at my college in Indy and you were in Cali. I also made you a website like this (idk if u remember) for your birthday and lots of other gifts. Idk if u remember but I went MIA before your birthday to make a website to surprise you. U were sad then you were happy again when you received it. Idk if you remember but I was happy too cause I know my efforts and love were appreciated. The photo was taken when I visited u during the trip after your birthday (03/22/2023). I was tired haha. College and long distance rls suck</p>
+            <br>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <!-- TODO: Replace with your photo -->
+        <img src="img/2024.jpg" alt="Add photo 2" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-right">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-2xl font-anime text-sakura">Your Birthday in 2024</h3>
+          <p class="mt-2 text-lg">We were broke as we first moved in together and lived on our own. We were living with crazy roommates this time too. We were too broke at that time so we had to do Uber while celebrating your birthday. We celebrated your birthday at Hadilao and I surprised you with the staff singing Happy Birthday. I hope you remember that you enjoyed Taylor Swift's 22 song on our way home.</p>
+         <br>
+        </div>
+      </div>
+      <!-- Timeline Item 3 (NEW) -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <img src="img/early2025.jpg" alt="Add photo 3" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-anime text-sakura">Your Birthday in 2025 (Early Birthday)</h3>
+          <p class="mt-2 text-lg">This year, we were more stable so we celebrated your birthday at a luxurious Japanese AYCE. You already knew my secret plan of the "Happy Birthday song" so u were not surprised anymore. I have been thinking about what I should do next years to surprise you ahhhhh. But I know you were happy about it.</p>
+         <br>
+        </div>
+      </div>
+      <!-- Timeline Item 4 (NEW) -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <img src="img/2025.jpg" alt="Add photo4" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-right">
+          <h3 class="text-2xl font-anime text-sakura">Your Birthday in 2025</h3>
+          <p class="mt-2 text-lg">Your birthday this year was on your normal work day so you still had to go to work. At home, I secretly walked to Walmart to buy balloons and cake for you. Though it was kinda depressing as it was in the ghetto apartment (with lots of roaches). But I hope you know I tried my best to make your day special. I couldn't find the photos as they were in the dead Samsung phone so I put the photos of us during your dad's birthday later of that year instead hihi. Ah, it was also your first birthday with Jackie too</p>
+            <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Sanchita's Favorite Anime (NEW SECTION) -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Hall of Fame</h2>
+    <p class="text-center text-lg -mt-8 mb-12">(Your Achievements in your 23)</p>
+    <div class="relative">
+      <!-- Scroll Buttons -->
+      <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <!-- Scrollable Container -->
+      <div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
+        <div class="flex snap-x snap-mandatory gap-8">
+          <!-- Anime Card 1 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/gc.jpg" alt="Photo 1" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">April 01 2025</h3>
+              <p class="mt-2">Become a permanent citizen of the USA lol =))</p>
+            </div>
+          </div>
+          <!-- Anime Card 2 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/army.jpg" alt="Photo 2" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">April 23 2025</h3>
+              <p class="mt-2">Enlisted in the Army</p>
+            </div>
+          </div>
+          <!-- Anime Card 3 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/truck.jpg" alt="Photo 3" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Nov 1 2025</h3>
+              <p class="mt-2">Pay Off The Truck</p>
+            </div>
+          </div>
+          <!-- Anime Card 4 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/soldier.jpg" alt="Photo 4" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Nov 26 2025</h3>
+              <p class="mt-2">Became a Soldier of the US Army</p>
+            </div>
+          </div>
+          <!-- Anime Card 6 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/ait.jpg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Feb 17 2026</h3>
+              <p class="mt-2">Graduated from AIT with Honors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The Gallery -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">The Y.V.A. Collection</h2>
+    <p class="text-center text-lg -mt-8 mb-12">(Your Very-own Adventures)</p>
+    <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="img/mem1.jpg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/mem1.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 1">
+      </a>
+      <a href="img/mem2.jpg" data-aos="zoom-in" data-aos-delay="100" class="block w-full h-48 md:h-64">
+        <img src="img/mem2.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 2">
+      </a>
+      <a href="img/mem3.jpg" data-aos="zoom-in" data-aos-delay="200" class="block w-full h-48 md:h-64">
+        <img src="img/mem3.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 3">
+      </a>
+      <a href="img/mem4.jpeg" data-aos="zoom-in" data-aos-delay="300" class="block w-full h-48 md:h-64">
+        <img src="img/mem4.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 4">
+      </a>
+      <!-- Second Row of Photos -->
+      <a href="img/mem5.jpeg" data-aos="zoom-in" data-aos-delay="400" class="block w-full h-48 md:h-64">
+        <img src="img/mem5.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 5">
+      </a>
+      <a href="img/mem6.jpeg" data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
+        <img src="img/mem6.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 6">
+      </a>
+      <a href="img/mem7.jpg" data-aos="zoom-in" data-aos-delay="600" class="block w-full h-48 md:h-64">
+        <img src="img/mem7.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 7">
+      </a>
+      <a href="img/mem8.jpeg" data-aos="zoom-in" data-aos-delay="700" class="block w-full h-48 md:h-64">
+        <img src="img/mem8.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 8">
+      </a>
+      <!-- Third Row of Photos -->
+      <a href="img/mem9.jpg" data-aos="zoom-in" data-aos-delay="800" class="block w-full h-48 md:h-64">
+        <img src="img/mem9.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 9">
+      </a>
+      <a href="img/mem10.jpg" data-aos="zoom-in" data-aos-delay="900" class="block w-full h-48 md:h-64">
+        <img src="img/mem10.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 10">
+      </a>
+      <a href="img/mem11.jpg" data-aos="zoom-in" data-aos-delay="1000" class="block w-full h-48 md:h-64">
+        <img src="img/mem11.jpg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 11">
+      </a>
+      <a href="img/mem12.jpeg" data-aos="zoom-in" data-aos-delay="1100" class="block w-full h-48 md:h-64">
+        <img src="img/mem12.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 12">
+      </a>
+    </div>
+  </section>
+
+    <!-- Section 6: Video Finale -->
+    <section class="my-16 md:my-24" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-anime text-center mb-4">Happy Birthday My Husband James McFadden</h2>
+        <div class="max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden bg-navy">
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy text-white p-8 text-center">
+  <p>Enjoy your day to the fullest.</p>
+  <p class="text-sm opacity-70 mt-2">Hope you liked it...</p>
+</footer>
+
+<!-- These scripts are for the animations and photo gallery -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+<!-- Link to your new external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
